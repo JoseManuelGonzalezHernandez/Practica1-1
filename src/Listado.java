@@ -23,14 +23,27 @@ public class Listado {
                 registro++;
             }
 
-            double registroRandom = Math.floor(Math.random()*(registro-2+2)+2);
+            double registroRandom = Math.floor(Math.random()*(registro-2+1)+2);
 
             while ((linea = br.readLine()) != null) {
                 //System.out.println("Registro random: " + registroRandom);
                 //System.out.println("Contador: " + count);
                 count++;
                 if (count == registroRandom) {
+                    double nota1 = truncXDecimales((Math.random()*10),2);
+                    double nota2 = truncXDecimales((Math.random()*10),2);
+                    double nota3 = truncXDecimales((Math.random()*10),2);
+                    double nota4 = truncXDecimales((Math.random()*10),2);
+                    //Formula redondear X decimales -> Math.round(NUMERO*Math.pow(10,X)/Math.pow(10.X);
+                    double notaMedia = truncXDecimales(((nota1 + nota2 + nota3 + nota4)/4),2);
+
+
                     System.out.println(linea);
+                    System.out.println("Nota 1: " + nota1);
+                    System.out.println("Nota 2: " + nota2);
+                    System.out.println("Nota 3: " + nota3);
+                    System.out.println("Nota 4: " + nota4);
+                    System.out.println("Nota Media: " + notaMedia);
                     break;
                 }
             }
@@ -48,5 +61,9 @@ public class Listado {
                 e2.printStackTrace();
             }
         }
+    }
+
+    public static double truncXDecimales(double num,int decimales) {
+        return Math.round(num*Math.pow(10,decimales))/Math.pow(10,decimales);
     }
 }
