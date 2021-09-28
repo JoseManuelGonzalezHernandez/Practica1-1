@@ -1,0 +1,10 @@
+AIMAR	 Nota 1: 9.52 Nota 2: 7.8 Nota 3: 2.06 Nota 4: 4.82 Nota Media: 6.05
+AINARA	 Nota 1: 7.22 Nota 2: 7.91 Nota 3: 8.03 Nota 4: 1.51 Nota Media: 6.17
+AMBER	 Nota 1: 2.18 Nota 2: 0.3 Nota 3: 3.94 Nota 4: 1.14 Nota Media: 1.89
+ADAM	 Nota 1: 8.68 Nota 2: 5.34 Nota 3: 7.62 Nota 4: 7.97 Nota Media: 7.4
+CAMILA	 Nota 1: 2.13 Nota 2: 1.38 Nota 3: 7.56 Nota 4: 0.6 Nota Media: 2.92
+AILYN	 Nota 1: 1.73 Nota 2: 0.76 Nota 3: 0.78 Nota 4: 5.95 Nota Media: 2.31
+CARLOTA	 Nota 1: 1.81 Nota 2: 6.99 Nota 3: 3.55 Nota 4: 3.69 Nota Media: 4.01
+ACERINA	 Nota 1: 7.13 Nota 2: 8.64 Nota 3: 2.38 Nota 4: 7.59 Nota Media: 6.44
+ANTONIO	 Nota 1: 6.66 Nota 2: 9.19 Nota 3: 0.04 Nota 4: 9.8 Nota Media: 6.42
+ADAL GABRIEL	 Nota 1: 5.07 Nota 2: 5.1 Nota 3: 9.71 Nota 4: 3.9 Nota Media: 5.95

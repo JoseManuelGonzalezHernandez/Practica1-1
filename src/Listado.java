@@ -61,8 +61,12 @@ public class Listado {
                 double nota3 = truncXDecimales((Math.random()*((10-1)+1)+0),2);
                 double nota4 = truncXDecimales((Math.random()*((10-1)+1)+0),2);
                 double notaMedia = truncXDecimales(((nota1 + nota2 + nota3 + nota4)/4),2);
+
                 //GUARDAR TODA LA INFORMACIÓN EN EL ARCHIVO
                 pw.println(names[posRandom] + "\t Nota 1: " + nota1 + " Nota 2: " + nota2 + " Nota 3: " + nota3 + " Nota 4: " + nota4 + " Nota Media: " + notaMedia);
+
+                //MOSTRAR LA INFORMACIÓN POR PANTALLA
+                System.out.println(names[posRandom] + "\t Nota 1: " + nota1 + " Nota 2: " + nota2 + " Nota 3: " + nota3 + " Nota 4: " + nota4 + " Nota Media: " + notaMedia);
             }
         } catch (Exception e) {
             //MOSTRAR ERROR
