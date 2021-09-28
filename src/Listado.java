@@ -3,16 +3,25 @@ import java.util.Scanner;
 
 public class Listado {
     public static void main(String[] args) {
-        File archivo = null;
+        File archivoEntrada = null;
+        File archivoSalida = null;
         FileReader fr = null;
         BufferedReader br = null;
+        FileWriter fw = null;
+        PrintWriter pw = null;
 
         try {
-            //CARGA DE ARCHIVO
-            archivo = new File("C:\\Users\\joseg\\Desktop\\Carpeta Compartida W10\\D.A.M\\2º\\Goyo\\Programacion multimedia y dispositivos moviles\\Practica1-1\\src\\ListadoDeNombres.csv");
-            fr = new FileReader(archivo);
+            //CARGA DE ARCHIVO DE ENTRADA
+            archivoEntrada = new File("C:\\Users\\joseg\\Desktop\\Carpeta Compartida W10\\D.A.M\\2º\\Goyo\\Programacion multimedia y dispositivos moviles\\Practica1-1\\src\\ListadoDeNombres.csv");
+            fr = new FileReader(archivoEntrada);
             br = new BufferedReader(fr);
             Scanner s = null;
+
+            //CARGA DE ARCHIVO DE SALIDA
+            archivoSalida = new File("C:\\Users\\joseg\\Desktop\\Carpeta Compartida W10\\D.A.M\\2º\\Goyo\\Programacion multimedia y dispositivos moviles\\Practica1-1\\src\\Notas.txt");
+            fw = new FileWriter(archivoSalida);
+            pw = new PrintWriter(archivoSalida);
+
 
             //ARRAYS DE NOMBRES
             String[] names;
@@ -24,7 +33,7 @@ public class Listado {
             int personas = 10;
 
             //ADIVINAR REGISTROS EN EL ARCHIVO
-            s = new Scanner(archivo);
+            s = new Scanner(archivoEntrada);
             while (s.hasNextLine()) {
                 s.nextLine();
                 registro++;
@@ -52,14 +61,9 @@ public class Listado {
                 double nota3 = truncXDecimales((Math.random()*10),2);
                 double nota4 = truncXDecimales((Math.random()*10),2);
                 double notaMedia = truncXDecimales(((nota1 + nota2 + nota3 + nota4)/4),2);
-                //MOSTRAR TODA LA INFORMACIÓN
-                System.out.println(names[posRandom]);
-                System.out.println("Nota 1: " + nota1);
-                System.out.println("Nota 2: " + nota2);
-                System.out.println("Nota 3: " + nota3);
-                System.out.println("Nota 4: " + nota4);
-                System.out.println("Nota Media: " + notaMedia);
-                System.out.println("****************");
+                //GUARDAR TODA LA INFORMACIÓN EN EL ARCHIVO
+                pw.println(names[posRandom] + "\t Nota 1: " + nota1 + " Nota 2: " + nota2 + " Nota 3: " + nota3 + " Nota 4: " + nota4 + " Nota Media: " + notaMedia);
+
             }
         } catch (Exception e) {
             //MOSTRAR ERROR
@@ -72,6 +76,7 @@ public class Listado {
                 }
                 if (null != fr) {
                     fr.close();
+                    pw.close();
                 }
             } catch (Exception e2) {
                 //MOSTRAR ERROR
