@@ -55,15 +55,14 @@ public class Listado {
                 //ELEGIR UNA POSICION ALEATORIA DEL ARRAY
                 int posRandom = (int) Math.floor(Math.random()*((registro-1)-1+1)+1);
 
-                //CALCULAR NOTAS RANDOM -> Formula redondear X decimales -> Math.round(NUMERO*Math.pow(10,X)/Math.pow(10.X);
-                double nota1 = truncXDecimales((Math.random()*10),2);
-                double nota2 = truncXDecimales((Math.random()*10),2);
-                double nota3 = truncXDecimales((Math.random()*10),2);
-                double nota4 = truncXDecimales((Math.random()*10),2);
+                //CALCULAR NOTAS RANDOM -> Formula Math.random()*(max-min+1)+min);
+                double nota1 = truncXDecimales((Math.random()*((10-1)+1)+0),2);
+                double nota2 = truncXDecimales((Math.random()*((10-1)+1)+0),2);
+                double nota3 = truncXDecimales((Math.random()*((10-1)+1)+0),2);
+                double nota4 = truncXDecimales((Math.random()*((10-1)+1)+0),2);
                 double notaMedia = truncXDecimales(((nota1 + nota2 + nota3 + nota4)/4),2);
                 //GUARDAR TODA LA INFORMACIÓN EN EL ARCHIVO
                 pw.println(names[posRandom] + "\t Nota 1: " + nota1 + " Nota 2: " + nota2 + " Nota 3: " + nota3 + " Nota 4: " + nota4 + " Nota Media: " + notaMedia);
-
             }
         } catch (Exception e) {
             //MOSTRAR ERROR
